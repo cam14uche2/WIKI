@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse
+from .models import Post
 
 
 def  home(request):
@@ -44,7 +45,7 @@ def user_logout(request):
 
 def search(request):
     q=request.GET['q']
-    allposts= User.objects.filter(title__icontains=q)
+    allposts= Post.objects.filter(title__icontains=q)
     output={'allposts': allposts}
-    return render(render,'uche/search.html', output )      
+    return render(render,'uche/home.html', output )      
     

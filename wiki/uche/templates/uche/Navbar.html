@@ -22,9 +22,9 @@
         
         </ul>
         <br/>
-<form  action="{% url 'search' %}" method="GET" value="{{request.GET.q}}">
-Search <input type="text" name="q" id = "q" value="{{request.GET.q}}" placeholder="Search posts"/>
-<input type="submit" name="submit" value="Search"/>
+<form  action="{% url 'home' %}" method="GET" value="{{request.GET.q}}">
+Search <input type="text" name="q" id = "q" value="{{request.GET.q}}" placeholder="search posts"/>
+<input type="submit" name="submit" value="search"/>
 </form>
 
 
